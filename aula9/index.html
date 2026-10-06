@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Grão Dourado — Class e ID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Clube do livro</h1>
+
+    <!-- CLASSE + ID: herda o visual de .card e o ID sobrescreve o que muda -->
+    <div class="livro" id="livro-semana">
+      <h4>Livros da semana</h4>
+      <p>Qual deveria ser o proximo livro da semana?</p>
+    </div>
+
+    <!-- SÓ A CLASSE BASE -->
+    <div class="livro">
+      <h4>Noites Brancas</h4>
+      <p>Dostoievski</p>
+    </div>
+
+    <div class="livro">
+      <h4>O Primeiro Amor</h4>
+      <p>Ivan Turguêniev</p>
+    </div>
+
+    <div class="livro">
+      <h4>O Retrato de Dorian Gray</h4>
+      <p>Oscar Wilde</p>
+    </div>
+
+    <div class="livro">
+      <h4>memórias póstumas de brás cubas</h4>
+      <p>Machado de Assis</p>
+    </div>
+
+    <!-- DUAS CLASSES: card + destaque (separadas por espaço) -->
+    <div class="livro excluido">
+      <h4>De quanta terra precisa um homem?</h4>
+      <p>Liev Tolstói</p>
+    </div>
+
+    <!-- DUAS CLASSES: card + esgotado -->
+    <div class="livro esgotado">
+      <h4>A Metamorfose</h4>
+      <p>Franz Kafka</p>
+    </div>
+  </main>
+
+  <a href="../index.html"><button style="background-color: #f0f5fc; color: #105391; border: 3px solid #105391; border-radius: 20px; width: 60px; height: 33px;">Voltar</button></a>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+h1 {
+    color: #0c4478;
+}
+
+.livro {
+    background-color: #fff;
+    border: 2px solid #327bbf;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.livro h4 {
+    margin: 0 0 4px;
+    color: #4f9ae0;
+}
+
+.livro p {
+    margin: 0;
+    color: #123456;
+}
+
+/* Classes Modificadoras elas se somam ao card */
+
+.excluido {
+    border-color: #c4262e;
+    background-color: #fff4f4;
+}
+
+.esgotado {
+    opacity: 0.5;
+}
+
+.esgotado h4 {
+    text-decoration: line-through;
+}
+
+/* ID são únicos, só podem ser usados uma vez */
+
+#livro-semana {
+    background-color: #105391;
+    border: none;
+    text-align: center;
+}
+#livro-semana h4 {
+    color: #fff;
+}
+
+#livro-semana p {
+    color: #fff;
+}
