@@ -1,0 +1,154 @@
+/* ==========================================================
+   Mesmo layout do original, só com cores sutis de hamburgueria
+   (tons terrosos e apagados) e cantos levemente arredondados.
+   ========================================================== */
+:root {
+  --texto: #2d2420;
+  --nota: #f3e5b0;        /* mostarda suave */
+  --banner: #3a2a22;      /* marrom escuro */
+  --menu: #6b3a32;        /* vermelho amarronzado */
+  --menu-hover: #eadfd3;
+  --lateral: #f6f0ea;     /* creme */
+  --rodape: #eadfd3;
+  --destaque: #c8782a;    /* laranja apagado (foco) */
+
+  --raio: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  margin: 0;
+}
+
+.anotacao {
+  background-color: var(--nota);
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.anotacao p {
+  margin: 8px 0;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  background-color: var(--banner);                        /* reserva, caso a imagem não carregue */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://storage.googleapis.com/bedrock-prod-user-assets/watermarked_img_313568501310410969.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Barra de navegação: links lado a lado */
+.barra_nav {
+  display: flex;
+  background-color: var(--menu);
+}
+
+.barra_nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Trocar a cor quando o cursor estiver sobre o link */
+.barra_nav a:hover {
+  background-color: var(--menu-hover);
+  color: var(--texto);
+}
+
+/* Contorno para quem navega pelo teclado */
+.barra_nav a:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: -3px;
+}
+
+/* Coluna: as duas colunas lado a lado */
+.coluna {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Barra lateral: 30% da largura */
+.lateral {
+  flex: 30%;
+  background-color: var(--lateral);
+  padding: 20px;
+}
+
+/* Coluna principal: 70% da largura */
+.principal {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.legenda {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Estilização das Imagens */
+.imagem_falsa {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  display: block;
+}
+
+.imagem_falsa2 {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border-radius: var(--raio);
+  display: block;
+}
+
+.imagem_falsa3 {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  display: block;
+}
+
+/* Rodapé */
+.rodape {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--rodape);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e celulares (até 768px): as colunas ficam uma embaixo da outra */
+@media screen and (max-width: 768px) {
+  .coluna {
+    flex-direction: column;
+  }
+}
+
+/* Celulares (até 500px): menu empilhado e banner próprio para tela pequena */
+@media screen and (max-width: 500px) {
+  .barra_nav {
+    flex-direction: column;
+  }
+
+  .cabecalho {
+    padding: 40px 15px;
+  }
+}
